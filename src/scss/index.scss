@@ -1,2 +1,11 @@
-@import url("palette.css");
-@import url("elements.css");
+
+/* Base styles */ 
+@import url("base/reset.scss");
+@import url("base/palette.scss");
+@import url("base/variables.scss");
+
+/* Global styles */
+@import url("layout.scss");
+@import url("elements.scss");
+@import url("states.scss");
+
