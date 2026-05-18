@@ -1,10 +1,50 @@
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    padding-top: 70px;
+    margin: 0;
+}
+
 header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1;
+    border-bottom: 1px solid var(--grey-light);
     background: white;
+    gap: 40px;
     padding: 10px 0;
     margin: 0 auto;
+
+    .logo {
+        height: 38px;
+        a {
+            color: inherit;
+            text-decoration: none;
+
+            img {
+                position: absolute;
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 500;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    .search {
+        display: flex;
+        width: 100%;
+        border: 1px solid #ececec;
+        border-radius: 40px;
+        height: 38px;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
 }
