@@ -37,7 +37,7 @@ button, .button {
     }
 
     &.stroke {
-        border: 1px solid #ececec;
+        border: 1px solid var(--grey-light);
     }
 
     &.on {
@@ -69,7 +69,6 @@ button, .button {
             position: absolute;
             width: 100%;
             transform-origin: top;
-            background: grey;
             text-align: left;
             border-radius: 20px 20px 0 0;
 
