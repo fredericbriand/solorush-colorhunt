@@ -3,9 +3,14 @@
     justify-content: space-between;
 }
 
-.grid-container {
+.sticky {
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 90px);
+}
+
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 5px 20px 30px;
 }

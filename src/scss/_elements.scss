@@ -85,8 +85,6 @@ header {
 main {
 
     .categories {
-        position: sticky;
-        height: calc(100vh - 90px);
         min-width: 200px;
         overflow-y: scroll;
         padding: 0 20px;
@@ -132,6 +130,33 @@ main {
                 }
 
             }
+        }
+    }
+
+    #palettes-container {
+        flex-grow: 1;
+        grid-row-gap: 24px;
+        padding: 5px 20px 30px;
+    }
+
+    aside {
+        min-width: 340px;
+        max-width: 340px;
+        h1 {
+            max-width: 240px;
+            font-size: 1.1rem;
+            line-height: 140%;
+            font-weight: 500;
+            margin: 0;
+        }
+        h2 {
+            max-width: 240px;
+            font-size: .75rem;
+            font-weight: 400;
+            line-height: 140%;
+            border-bottom: 1px solid var(--grey-light);
+            padding-bottom: 15px;
+            margin-top: 10px;
         }
     }
 

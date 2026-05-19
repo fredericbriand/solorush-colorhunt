@@ -9,7 +9,7 @@
     margin-left: -6px;
     margin-right: 2px;
 
-    $icons: ("new": "-30", "popular": "-60", "random": "-90", "collection": "-150");
+    $icons: ("new": "-30", "popular": "-60", "random": "-90", "like": "-150");
 
     @each $name, $position in $icons {
         &.icon-#{$name} {
@@ -18,13 +18,14 @@
     }
 }
 
-.button {
+button, .button {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     height: 38px;
+    background: transparent;
     border-radius: 10px;
     font-size: 14px;
     overflow: hidden;
@@ -51,6 +52,54 @@
     }
 }
 
-.item {
+// Item palette //
+.palette-card {
+    position: relative;
+
+    .palette-colors {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        border-radius: 10px;
+        padding-bottom: 100%;
+        margin-bottom: 14px;
+        overflow: hidden;
+
+        .color {
+            position: absolute;
+            width: 100%;
+            transform-origin: top;
+            background: grey;
+            text-align: left;
+            border-radius: 20px 20px 0 0;
+
+            &.c0 {
+                padding-bottom: 41%;
+            }
+
+            &.c1 {
+                padding-bottom: 67%;
+            }
+
+            &.c2 {
+                padding-bottom: 85%;
+            }
+
+            &.c3 {
+                padding-bottom: 100%;
+            }
+        }
+
+    }
+
+    .flex {
+        align-items: center;
+
+        .date {
+            flex-shrink: 0;
+            font-size: .75rem;
+            opacity: 0.7;
+        }
+    }
 
 }

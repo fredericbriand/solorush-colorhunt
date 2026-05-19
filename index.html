@@ -1,100 +1,116 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="//fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="dist/css/index.css" />
-        <title>Better Colorhunt</title>
-    </head>
-    <body>
-        <!-- HEADER PART -->
-        <header class="flex">
-            <div class="logo">
-                <a href="/" class="flex">
-                    <img
-                        src="src/assets/img/color-hunt-logo-tongue.svg"
-                        alt="Tongue icon"
-                    />
-                    <img
-                        src="src/assets/img/color-hunt-logo-face.svg"
-                        alt="Face icon"
-                    />
-                    <span>Color Hunt</span>
-                </a>
-            </div>
-            <div class="search">
-                <input type="text" placeholder="Search palettes" />
-                <i class="icon search-icon"></i>
-            </div>
-            <div class="actions">
-                <a href="_blank" class="button stroke">
-                    <img
-                        src="/src/assets/img/color-hunt-icon-chrome.png"
-                        alt="Chrome icon"
-                    />
-                    <span>Add to Chrome</span>
-                </a>
-                <button></button>
-            </div>
-        </header>
 
-        <!-- MAIN PART -->
-        <main class="flex">
-            <!-- CATEGORIES -->
-            <nav class="categories">
-                <ul class="categories-primary">
-                    <li>
-                        <a href="#" class="button on">
-                            <i class="icon icon-new"></i>
-                            <span>New</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="button">
-                            <i class="icon icon-popular"></i>
-                            <span>Popular</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="button">
-                            <i class="icon icon-random"></i>
-                            <span>Random</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="button">
-                            <i class="icon icon-collection"></i>
-                            <span>Collection</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="categories-secondary">
-                    <li><a href="#" class="button">Pastel</a></li>
-                    <li><a href="#" class="button">Vintage</a></li>
-                    <li><a href="#" class="button">Retro</a></li>
-                    <li><a href="#" class="button">Neon</a></li>
-                    <li><a href="#" class="button">Gold</a></li>
-                    <li><a href="#" class="button">Light</a></li>
-                    <li><a href="#" class="button">Dark</a></li>
-                    <li><a href="#" class="button">Warm</a></li>
-                    <li><a href="#" class="button">Cold</a></li>
-                    <li><a href="#" class="button">Summer</a></li>
-                    <li><a href="#" class="button">Fall</a></li>
-                    <li><a href="#" class="button">Winter</a></li>
-                    <li><a href="#" class="button">Spring</a></li>
-                    <li><a href="#" class="button">Happy</a></li>
-                </ul>
-            </nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="//fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/index.css" />
+    <title>Better Colorhunt</title>
+</head>
 
-            <!-- PALETTES -->
-            <div class="grid-container"></div>
+<body>
+    <!-- HEADER PART -->
+    <header class="flex">
+        <div class="logo">
+            <a href="/" class="flex">
+                <img src="src/assets/img/color-hunt-logo-tongue.svg" alt="Tongue icon" />
+                <img src="src/assets/img/color-hunt-logo-face.svg" alt="Face icon" />
+                <span>Color Hunt</span>
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search palettes" />
+            <i class="icon search-icon"></i>
+        </div>
+        <div class="actions">
+            <a href="_blank" class="button stroke">
+                <img src="/src/assets/img/color-hunt-icon-chrome.png" alt="Chrome icon" />
+                <span>Add to Chrome</span>
+            </a>
+        </div>
+    </header>
 
-            <!-- ASIDE -->
-            <aside></aside>
-        </main>
-    </body>
+    <!-- MAIN PART -->
+    <main class="flex">
+        <!-- CATEGORIES -->
+        <nav class="categories sticky">
+            <ul class="categories-primary">
+                <li>
+                    <a href="#" class="button on">
+                        <i class="icon icon-new"></i>
+                        <span>New</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="button">
+                        <i class="icon icon-popular"></i>
+                        <span>Popular</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="button">
+                        <i class="icon icon-random"></i>
+                        <span>Random</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="button">
+                        <i class="icon icon-like"></i>
+                        <span>Collection</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="categories-secondary">
+                <li><a href="#" class="button">Pastel</a></li>
+                <li><a href="#" class="button">Vintage</a></li>
+                <li><a href="#" class="button">Retro</a></li>
+                <li><a href="#" class="button">Neon</a></li>
+                <li><a href="#" class="button">Gold</a></li>
+                <li><a href="#" class="button">Light</a></li>
+                <li><a href="#" class="button">Dark</a></li>
+                <li><a href="#" class="button">Warm</a></li>
+                <li><a href="#" class="button">Cold</a></li>
+                <li><a href="#" class="button">Summer</a></li>
+                <li><a href="#" class="button">Fall</a></li>
+                <li><a href="#" class="button">Winter</a></li>
+                <li><a href="#" class="button">Spring</a></li>
+                <li><a href="#" class="button">Happy</a></li>
+            </ul>
+        </nav>
+
+        <!-- PALETTES -->
+
+        <template id="palette-template">
+            <article class="palette-card">
+                <div class="palette-colors">
+                    <div class="color c3" style="background-color: rgb(13, 83, 14);"></div>
+                    <div class="color c2" style="background-color: rgb(255, 255, 255);"></div>
+                    <div class="color c1" style="background-color: rgb(0, 0, 0);"></div>
+                    <div class="color c0" style="background-color: rgb(255, 0, 0);"></div>
+                </div>
+
+                <div class="flex">
+                    <button class="stroke likes">
+                        <i class="icon icon-like"></i>
+                        <span>0</span>
+                    </button>
+                    <span class="date">today</span>
+                </div>
+            </article>
+        </template>
+
+        <section id="palettes-container" class="grid"></section>
+
+        <!-- ASIDE -->
+        <aside class="sticky">
+            <h1>Color Palettes for Designers and Artists</h1>
+            <h2>Discover the newest hand-picked palettes of Color Hunt</h2>
+        </aside>
+    </main>
+</body>
+
+<!-- <script src="/src/js/same-palettes.js"></script> -->
+<script src="/src/js/misc-palettes.js"></script>
+
 </html>
