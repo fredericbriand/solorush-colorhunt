@@ -9,6 +9,16 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
 }
 
 *:focus {
@@ -17,6 +27,7 @@ body {
 
 :root {
   --primary: #e4595b;
+  --grey-lighter: #f3f3f3;
   --grey-light: #ececec;
 }
 
@@ -24,7 +35,13 @@ body {
 .flex {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+  gap: 20px;
+  padding: 5px 20px 30px;
 }
 
 body {
@@ -33,9 +50,15 @@ body {
   padding-top: 70px;
   margin: 0;
 }
+body ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
 
 header {
   position: fixed;
+  align-items: center;
   width: 100%;
   top: 0;
   left: 0;
@@ -47,11 +70,11 @@ header {
   margin: 0 auto;
 }
 header .logo {
-  height: 38px;
+  min-width: 200px;
+  padding: 0 20px;
 }
 header .logo a {
-  color: inherit;
-  text-decoration: none;
+  align-items: center;
 }
 header .logo a img {
   position: absolute;
@@ -62,15 +85,133 @@ header .logo a span {
   margin-left: 50px;
 }
 header .search {
+  position: relative;
   display: flex;
+  height: 38px;
   width: 100%;
+  max-width: 100%;
   border: 1px solid #ececec;
   border-radius: 40px;
-  height: 38px;
-  position: relative;
   box-sizing: border-box;
   overflow: hidden;
-  max-width: 100%;
+}
+header .search .search-icon {
+  position: absolute;
+  left: 10px;
+  transition: opacity 0.2s;
+  z-index: 0;
+}
+header .search input {
+  height: 100%;
+  border: 0;
+  background: transparent;
+  padding-left: 34px;
+}
+header .actions {
+  min-width: 340px;
+  max-width: 340px;
+}
+header .actions img {
+  height: 30px;
+}
+
+main .categories {
+  position: sticky;
+  height: calc(100vh - 90px);
+  min-width: 200px;
+  overflow-y: scroll;
+  padding: 0 20px;
+}
+main .categories .categories-primary {
+  border-bottom: 1px solid var(--grey-light);
+}
+main .categories .categories-primary li {
+  height: 42px;
+  width: 100%;
+  margin-bottom: 6px;
+}
+main .categories .categories-primary li a {
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 1.1rem;
+}
+main .categories .categories-secondary {
+  position: relative;
+}
+main .categories .categories-secondary:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(to top, white, transparent);
+  pointer-events: none;
+}
+main .categories .categories-secondary li {
+  height: 30px;
+  width: 100%;
+  margin-bottom: 6px;
+}
+main .categories .categories-secondary li a {
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.icon {
+  width: 30px;
+  height: 100%;
+  flex-shrink: 0;
+  background-image: url("/src/assets/img/color-hunt-icons.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: 0;
+  margin-left: -6px;
+  margin-right: 2px;
+}
+.icon.icon-new {
+  background-position-x: -30px;
+}
+.icon.icon-popular {
+  background-position-x: -60px;
+}
+.icon.icon-random {
+  background-position-x: -90px;
+}
+.icon.icon-collection {
+  background-position-x: -150px;
+}
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 38px;
+  border-radius: 10px;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 0 14px;
+  cursor: pointer;
+}
+.button:hover, .button :focus {
+  background-color: var(--grey-lighter);
+}
+.button.stroke {
+  border: 1px solid #ececec;
+}
+.button.on {
+  background-color: var(--grey-light);
+}
+.button.on .icon {
+  filter: brightness(0%);
+  opacity: 0.9;
+}
+.button.on span {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=index.css.map */

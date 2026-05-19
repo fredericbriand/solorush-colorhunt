@@ -3,10 +3,19 @@ body {
     color: #1a1a1a;
     padding-top: 70px;
     margin: 0;
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+
 }
 
+// HEADER PART //
 header {
     position: fixed;
+    align-items: center;
     width: 100%;
     top: 0;
     left: 0;
@@ -18,11 +27,10 @@ header {
     margin: 0 auto;
 
     .logo {
-        height: 38px;
+        min-width: 200px;
+        padding: 0 20px;
         a {
-            color: inherit;
-            text-decoration: none;
-
+            align-items: center;
             img {
                 position: absolute;
             }
@@ -36,15 +44,95 @@ header {
     }
 
     .search {
+        position: relative;
         display: flex;
+        height: 38px;
         width: 100%;
+        max-width: 100%;
         border: 1px solid #ececec;
         border-radius: 40px;
-        height: 38px;
-        position: relative;
         box-sizing: border-box;
         overflow: hidden;
-        max-width: 100%;
+
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            transition: opacity .2s;
+            z-index: 0;
+        }
+
+        input {
+            height: 100%;
+            border: 0;
+            background: transparent;
+            padding-left: 34px;
+        }
+
+    }
+
+    .actions {
+        min-width: 340px;
+        max-width: 340px;
+
+        img {
+            height: 30px;
+        }
+    }
+
+}
+
+// MAIN PART //
+main {
+
+    .categories {
+        position: sticky;
+        height: calc(100vh - 90px);
+        min-width: 200px;
+        overflow-y: scroll;
+        padding: 0 20px;
+
+        .categories-primary {
+            border-bottom: 1px solid var(--grey-light);
+
+            li {
+                height: 42px;
+                width: 100%;
+                margin-bottom: 6px;
+                a {
+                    justify-content: flex-start;
+                    width: 100%;
+                    font-size: 1.1rem;
+                }
+
+            }
+        }
+
+        .categories-secondary {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 250px;
+                background-image: linear-gradient(to top, white, transparent);
+                pointer-events: none;
+            }
+
+            li {
+                height: 30px;
+                width: 100%;
+                margin-bottom: 6px;
+                a {
+                    justify-content: flex-start;
+                    width: 100%;
+                    font-size: .75rem;
+                    opacity: .8;
+                }
+
+            }
+        }
     }
 
 }

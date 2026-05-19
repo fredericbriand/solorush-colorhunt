@@ -1,11 +1,12 @@
 
 /* Base styles */ 
-@import "base/reset";
-@import "base/palette";
-@import "base/variables";
+@use "base/reset";
+@use "base/palette";
+@use "base/variables";
 
 /* Global styles */
-@import "layout";
-@import "elements";
-@import "states";
+@use "layout";
+@use "elements";
+@use "components";
+@use "states";
 

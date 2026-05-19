@@ -1,51 +1,100 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="//fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="dist/css/index.css" />
-    <title>Better Colorhunt</title>
-  </head>
-  <body>
-    <!-- HEADER PART -->
-    <header class="flex">
-      <div class="logo">
-        <a href="/" class="flex">
-          <img src="src/assets/img/color-hunt-logo-tongue.svg" alt="" />
-          <img src="src/assets/img/color-hunt-logo-face.svg" alt="" />
-          <span>Color Hunt</span>
-        </a>
-      </div>
-      <div class="search">
-        <input type="text" placeholder="Search palettes..." />
-        <i class="search-icon"></i>
-      </div>
-      <div class="actions">
-        <a href="_blank" class="primary-button">
-          <i></i>
-          <span>Add to Chrome</span>
-        </a>
-        <button></button>
-      </div>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="//fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="dist/css/index.css" />
+        <title>Better Colorhunt</title>
+    </head>
+    <body>
+        <!-- HEADER PART -->
+        <header class="flex">
+            <div class="logo">
+                <a href="/" class="flex">
+                    <img
+                        src="src/assets/img/color-hunt-logo-tongue.svg"
+                        alt="Tongue icon"
+                    />
+                    <img
+                        src="src/assets/img/color-hunt-logo-face.svg"
+                        alt="Face icon"
+                    />
+                    <span>Color Hunt</span>
+                </a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search palettes" />
+                <i class="icon search-icon"></i>
+            </div>
+            <div class="actions">
+                <a href="_blank" class="button stroke">
+                    <img
+                        src="/src/assets/img/color-hunt-icon-chrome.png"
+                        alt="Chrome icon"
+                    />
+                    <span>Add to Chrome</span>
+                </a>
+                <button></button>
+            </div>
+        </header>
 
-    <!-- MAIN PART -->
-    <main>
-      <!-- CATEGORIES -->
-      <nav class="categories">
-        <ul class="categories-primary"></ul>
-        <ul class="categories-secondary"></ul>
-      </nav>
+        <!-- MAIN PART -->
+        <main class="flex">
+            <!-- CATEGORIES -->
+            <nav class="categories">
+                <ul class="categories-primary">
+                    <li>
+                        <a href="#" class="button on">
+                            <i class="icon icon-new"></i>
+                            <span>New</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="button">
+                            <i class="icon icon-popular"></i>
+                            <span>Popular</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="button">
+                            <i class="icon icon-random"></i>
+                            <span>Random</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="button">
+                            <i class="icon icon-collection"></i>
+                            <span>Collection</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="categories-secondary">
+                    <li><a href="#" class="button">Pastel</a></li>
+                    <li><a href="#" class="button">Vintage</a></li>
+                    <li><a href="#" class="button">Retro</a></li>
+                    <li><a href="#" class="button">Neon</a></li>
+                    <li><a href="#" class="button">Gold</a></li>
+                    <li><a href="#" class="button">Light</a></li>
+                    <li><a href="#" class="button">Dark</a></li>
+                    <li><a href="#" class="button">Warm</a></li>
+                    <li><a href="#" class="button">Cold</a></li>
+                    <li><a href="#" class="button">Summer</a></li>
+                    <li><a href="#" class="button">Fall</a></li>
+                    <li><a href="#" class="button">Winter</a></li>
+                    <li><a href="#" class="button">Spring</a></li>
+                    <li><a href="#" class="button">Happy</a></li>
+                </ul>
+            </nav>
 
-      <!-- PALETTES -->
-      <div class="container"></div>
+            <!-- PALETTES -->
+            <div class="grid-container"></div>
 
-      <!-- ASIDE -->
-      <aside></aside>
-    </main>
-  </body>
+            <!-- ASIDE -->
+            <aside></aside>
+        </main>
+    </body>
 </html>

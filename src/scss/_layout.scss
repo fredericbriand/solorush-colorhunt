@@ -1,6 +1,11 @@
 .flex {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
+    gap: 20px;
+    padding: 5px 20px 30px;
+}
